@@ -1,0 +1,47 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:@typescript-eslint/eslint-recommended", "plugin:@typescript-eslint/recommended", "plugin:solid/typescript", "plugin:jsx-a11y/recommended"],
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "solid", "jsx-a11y"],
+  "rules": {
+    "solid/reactivity": "warn",
+    "solid/no-destructure": "off",
+    "solid/jsx-no-undef": "error",
+    "solid/prefer-show": "warn",
+    "@typescript-eslint/object-curly-spacing": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 10000
+      }
+    ]
+  },
+
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    },
+    {
+      "files": ["plugins/*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
+  "root": true
+}
