@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --tick-color: rgb(132 204 22);
+  --cross-color: rgb(244 63 94);
+}
+
 .content {
   display: grid;
   place-content: center;
@@ -60,7 +65,7 @@
 .help-bar {
   margin-top: 10px;
   height: 3px;
-  background: #000;
+  background: rgb(59 130 246);
   width: 0%;
 }
 .help-bar.active {
@@ -72,6 +77,18 @@
   justify-content: space-around;
   font-size: 14px;
   font-weight: 600;
+}
+.tick {
+  fill: var(--tick-color);
+}
+.cross {
+  fill: var(--cross-color);
+}
+.tick-wins {
+  color: var(--tick-color);
+}
+.cross-wins {
+  color: var(--cross-color);
 }
 @keyframes fill-bar {
   0% {

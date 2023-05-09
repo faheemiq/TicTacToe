@@ -53,15 +53,15 @@ export default function Home() {
   return (
     <div class="content">
       <div class="wins">
-        <div>Tick Wins: {score().tick}</div>
+        <div class="tick-wins">Tick Wins: {score().tick}</div>
         <div>Draw: {score().draw}</div>
-        <div>Cross Wins: {score().cross}</div>
+        <div class="cross-wins">Cross Wins: {score().cross}</div>
       </div>
       <div class={`box-container ${hasWon() ? 'box-lock' : ''}`}>
         <For each={Array(9)}>{(_, i) => <FillBox number={i() + 1} />}</For>
       </div>
       <div class="help-box">
-        <p class="help-text">{help()}</p>
+        <p class={`help-text ${state().player_won === 1 ? 'tick-wins' : state().player_won === 2 ? 'cross-wins' : ''}`}>{help()}</p>
         <div class={`help-bar ${hasWon() ? 'active' : ''}`} />
       </div>
     </div>
