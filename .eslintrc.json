@@ -17,7 +17,6 @@
   "plugins": ["@typescript-eslint", "solid", "jsx-a11y"],
   "rules": {
     "solid/reactivity": "warn",
-    "solid/no-destructure": "off",
     "solid/jsx-no-undef": "error",
     "solid/prefer-show": "warn",
     "@typescript-eslint/object-curly-spacing": "off",

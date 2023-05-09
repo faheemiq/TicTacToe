@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.content {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 0 5px #85858580;
+  border-radius: 5px;
+}
+.box-lock {
+  pointer-events: none;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-color: #c4c4c4;
+  display: grid;
+  place-content: center;
+}
+.box-5 {
+  border-width: 1px;
+}
+.box-4 {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+.box-6 {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+.box-2 {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+.box-8 {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+.box svg {
+  width: 90px;
+  height: 90px;
+  pointer-events: none;
+}
+.help-text {
+  text-align: center;
+}
+.help-box {
+  margin-top: 20px;
+}
+.box:empty {
+  cursor: pointer;
+}
+.help-bar {
+  margin-top: 10px;
+  height: 3px;
+  background: #000;
+  width: 0%;
+}
+.help-bar.active {
+  animation: fill-bar 3s cubic-bezier(1, 1, 0, 0) both;
+}
+@keyframes fill-bar {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
