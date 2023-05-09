@@ -66,6 +66,13 @@
 .help-bar.active {
   animation: fill-bar 3s cubic-bezier(1, 1, 0, 0) both;
 }
+.wins {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  font-weight: 600;
+}
 @keyframes fill-bar {
   0% {
     width: 100%;
